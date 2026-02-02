@@ -150,6 +150,10 @@
     <Compile Include="Migrations\202602021335348_coursedata.Designer.cs">
       <DependentUpon>202602021335348_coursedata.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202602021346594_UpdateEmployeeTable.cs" />
+    <Compile Include="Migrations\202602021346594_UpdateEmployeeTable.Designer.cs">
+      <DependentUpon>202602021346594_UpdateEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Courses.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -251,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202602021335348_coursedata.resx">
       <DependentUpon>202602021335348_coursedata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202602021346594_UpdateEmployeeTable.resx">
+      <DependentUpon>202602021346594_UpdateEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
