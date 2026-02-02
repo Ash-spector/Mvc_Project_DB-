@@ -15,5 +15,7 @@ namespace Mvc_Project_Db.Data
         }
         public DbSet <Employee> Employees  { get; set; }
         public DbSet <student> students { get; set; }
+         public DbSet <Courses> Courses { get; set; }
+
     }
 }

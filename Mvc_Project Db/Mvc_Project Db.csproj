@@ -146,7 +146,12 @@
     <Compile Include="Migrations\202601301402493_Addemailmodel.Designer.cs">
       <DependentUpon>202601301402493_Addemailmodel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202602021335348_coursedata.cs" />
+    <Compile Include="Migrations\202602021335348_coursedata.Designer.cs">
+      <DependentUpon>202602021335348_coursedata.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Courses.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -243,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202601301402493_Addemailmodel.resx">
       <DependentUpon>202601301402493_Addemailmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202602021335348_coursedata.resx">
+      <DependentUpon>202602021335348_coursedata.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
