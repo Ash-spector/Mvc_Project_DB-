@@ -11,6 +11,5 @@ namespace Mvc_Project_Db.Models
         public string Name  { get; set; }
         public int salary { get; set; }
         public string Address { get; set; }
-
     }
 }

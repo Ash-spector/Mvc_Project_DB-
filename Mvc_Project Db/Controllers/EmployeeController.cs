@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Mvc_Project_Db.Data;
+using Mvc_Project_Db.Models;
 
 namespace Mvc_Project_Db.Controllers
 {
@@ -20,6 +21,41 @@ namespace Mvc_Project_Db.Controllers
         {
             var employeelist = context.Employees.ToList();
             return View(employeelist);
+        }
+        /* GET: Employee/Create */
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Employee employee)
+        {
+            if (employee == null)
+            {
+                return HttpNotFound();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(employee);
+            }
+
+            context.Employees.Add(employee);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Edit (int id )
+        {
+            var employeeIndb = context.Employees.Find(id);
+            if (employeeIndb == null)
+            {
+                return HttpNotFound();
+            }
+            return View(employeeIndb);
         }
     }
 }
