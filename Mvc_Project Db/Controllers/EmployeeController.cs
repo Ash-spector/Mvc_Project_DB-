@@ -48,7 +48,7 @@ namespace Mvc_Project_Db.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult Edit (int id )
+        public ActionResult Edit(int id)
         {
             var employeeIndb = context.Employees.Find(id);
             if (employeeIndb == null)
@@ -56,6 +56,22 @@ namespace Mvc_Project_Db.Controllers
                 return HttpNotFound();
             }
             return View(employeeIndb);
+        }
+        public ActionResult Delete(int id)
+        {
+            var employeeIndb = context.Employees.Find(id);
+            if (employeeIndb == null)
+            {
+                return HttpNotFound();
+            }
+            context.Employees.Remove(employeeIndb);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult EditAll()
+        {
+            var employeelist = context.Employees.ToList();
+            return View(employeelist);
         }
     }
 }
