@@ -1,0 +1,27 @@
+﻿@model Mvc_Project_Db.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class=" text-center text-primary"> Employee Details</h2>
+<table class=" table table-bordered table-striped table-active">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Address</td>
+            <td>@Model.salary</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index"),
+</p>
